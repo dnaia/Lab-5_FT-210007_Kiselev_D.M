@@ -9,5 +9,5 @@
 # Инструкция по работе  
 Данную программу можно открыть в такой среде программирования, как PyCharm. Открывайте код из репозитория(Lab_6_FT_210007_Kiselev_D_M.py) и нажимаете комбинацию клавиш Ctrl + Shift + F10. Вводим размер матрицы, вводим необходимые условия, затем отношения условию к условию, получаем матрицу отношений.
 # Результаты тестирования
-![image](https://user-images.githubusercontent.com/112878064/196032349-570b5873-2977-420a-bed7-cde999cb2a3e.png)
-![image](https://user-images.githubusercontent.com/112878064/196032380-9e2f205f-fda8-44f0-b942-399e91dc8396.png)
+![image](https://user-images.githubusercontent.com/112878064/196215842-ef47291f-15f8-49bd-a6f3-7ce853f14408.png)
+![image](https://user-images.githubusercontent.com/112878064/196216045-d857a51b-b862-4feb-94bc-c3eea78b22b3.png)
