@@ -179,25 +179,38 @@ for counter in range(matrix_size):  # Заполнение шапки табли
 
 sss = []
 spissr = []
-for o in range(matrix_size):
+summa_vsego = 0
+for o in range(matrix_size):        #Сумма строк
     if o == 0:
         mhelp = ss
     else:
         mhelp = matrix[o]
 
     sumOfElements = sum(mhelp)
-    srznach = sumOfElements / len(matrix[o])
-    sranswer = int(srznach * 100) / 100  # Два знака после запятой
+    #srznach = sumOfElements / len(matrix[o])
+    sranswer = int(sumOfElements * 100) / 100  # Два знака после запятой
+    summa_vsego +=sranswer
     spissr.append(sranswer)
-sss.append(spissr)
-# print(sss)
-'''
-y = 0
 
-# for counter in range(matrix_size):  # Заполнение шапки таблицы вертикально(основных критериев)
-while y !=matrix_size:
-    print(header_matrix[y], ' | ', sss[y], sep=' ')
-    y += 1
+summa_vsegoclear = int(summa_vsego * 100) / 100
 
-# print(*matrix, sep='\n')
-'''
+#print(sss,summa_vsegoclear)
+
+ssshelp1 = []
+sssschet = 0
+for counter_1 in range(matrix_size):        #Оценка альернатив/функция полезности
+    shelp = spissr[sssschet]
+    ssshelp = (shelp) / (summa_vsegoclear)
+    print(ssshelp)
+    helpclear = int(ssshelp * 100) / 100
+    ssshelp1.append(helpclear)
+    sssschet+=1
+
+
+#print('spissr',spissr)
+#print('ssshelp',ssshelp1)
+print('Функция полезности всех критериев!')
+for counter in range(matrix_size):  # Заполнение шапки таблицы вертикально(основных критериев)
+    print(header_matrix[counter], ' | ', ssshelp1[counter], sep=' ')  # Не получается у меня вывести человеческую таблицу
+
+
