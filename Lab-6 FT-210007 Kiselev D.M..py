@@ -201,7 +201,7 @@ sssschet = 0
 for counter_1 in range(matrix_size):        #Оценка альернатив/функция полезности
     shelp = spissr[sssschet]
     ssshelp = (shelp) / (summa_vsegoclear)
-    print(ssshelp)
+    #print(ssshelp)
     helpclear = int(ssshelp * 100) / 100
     ssshelp1.append(helpclear)
     sssschet+=1
@@ -209,7 +209,7 @@ for counter_1 in range(matrix_size):        #Оценка альернатив/�
 
 #print('spissr',spissr)
 #print('ssshelp',ssshelp1)
-print('Функция полезности всех критериев!')
+print('\nФункция полезности всех критериев!\n')
 for counter in range(matrix_size):  # Заполнение шапки таблицы вертикально(основных критериев)
     print(header_matrix[counter], ' | ', ssshelp1[counter], sep=' ')  # Не получается у меня вывести человеческую таблицу
 
