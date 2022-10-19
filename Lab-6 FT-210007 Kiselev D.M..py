@@ -64,7 +64,7 @@ for item in ss:  # Заполняет весь первый столбик
     if counteritem == len(ss):
         break
     s2 = 1 / ss[helpone]
-    sanswer = int(s2 * 100) / 100  # Два знака после запятой
+    sanswer = round(s2,2) #int(s2 * 100) / 100  # Два знака после запятой   #Переделал округление
     matrix[counteritem][0] = (sanswer)
     helpzero += 1
     helpone += 1
@@ -167,7 +167,7 @@ for l in range(matrix_size - 2):  # Заполняем левую диагона
         if num == matrix_size:
             break
         a2 = 1 / spisok[helpzero]
-        aanswer = int(a2 * 100) / 100
+        aanswer = round(a2,2)   #int(a2 * 100) / 100    #Переделал округление
         matrix[hcounter][num] = aanswer
         helpzero += 1
         hcounter += 1
@@ -188,11 +188,11 @@ for o in range(matrix_size):        #Сумма строк
 
     sumOfElements = sum(mhelp)
     #srznach = sumOfElements / len(matrix[o])
-    sranswer = int(sumOfElements * 100) / 100  # Два знака после запятой
+    sranswer = round(sumOfElements,2)   #int(sumOfElements * 100) / 100  # Два знака после запятой  #Переделал округление
     summa_vsego +=sranswer
     spissr.append(sranswer)
 
-summa_vsegoclear = int(summa_vsego * 100) / 100
+summa_vsegoclear = round(summa_vsego,2) #int(summa_vsego * 100) / 100   #Переделал округление
 
 #print(sss,summa_vsegoclear)
 
@@ -202,7 +202,7 @@ for counter_1 in range(matrix_size):        #Оценка альернатив/�
     shelp = spissr[sssschet]
     ssshelp = (shelp) / (summa_vsegoclear)
     #print(ssshelp)
-    helpclear = int(ssshelp * 100) / 100
+    helpclear = round(ssshelp,2)        #int(ssshelp * 100) / 100       #Переделал округление
     ssshelp1.append(helpclear)
     sssschet+=1
 
