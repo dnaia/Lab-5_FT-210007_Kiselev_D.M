@@ -1,3 +1,4 @@
+import math
 counter1 = 0  # Вспомогательный счетчик
 while counter1 != 1:  # Проверка, чтобы ввели число.
     # | Диалоговый режим с пользователем и обработкой ошибок ввода
@@ -207,8 +208,34 @@ for counter_1 in range(matrix_size):        #Оценка альернатив/�
     sssschet+=1
 
 
+# Теперь будем смотреть равны ли все элементы оценки альтернатив 1 т.к, они должны быть равны 1
+#print(ssshelp1)
+sumssshelp1 = sum(ssshelp1) #Сумма всех оценок альтернатив
+#sumssshelp1 = round(sumssshelp1,2)
+counter = 0
+counter1 = 1
+
+while sumssshelp1 !=1:
+    if sumssshelp1 > 1:
+        for i in range(len(ssshelp1)):
+            summa_end = sum(ssshelp1)
+            if summa_end == 1:
+                break
+            if (ssshelp1[i] % round(ssshelp1[i],0) == 5) or (ssshelp1[i] % round(ssshelp1[i],0) % 10 == 5):
+                zamena = math.floor(ssshelp1[i])
+                ssshelp1[i] = zamena
+    elif sumssshelp1 < 1:
+        for i in range(len(ssshelp1)):
+            summa_end = sum(ssshelp1)
+            if summa_end == 1:
+                break
+            if (ssshelp1[i] % round(ssshelp1[i],0) == 5) or (ssshelp1[i] % round(ssshelp1[i],0) % 10 == 5):
+                zamena = math.ceil(ssshelp1[i])
+                ssshelp1[i] = zamena
+
 #print('spissr',spissr)
 #print('ssshelp',ssshelp1)
+
 print('\nФункция полезности всех критериев!\n')
 for counter in range(matrix_size):  # Заполнение шапки таблицы вертикально(основных критериев)
     print(header_matrix[counter], ' | ', ssshelp1[counter], sep=' ')  # Не получается у меня вывести человеческую таблицу
